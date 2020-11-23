@@ -1,0 +1,154 @@
+#include <iostream>
+using namespace std;
+
+void fungsi_pertama(int pilihan)
+{
+    string nama_barang[3] = {"Capuccino", "Coca-cola", "Teh Botol"};
+    int harga_barang[3] = {5000, 7000, 5000};
+    int jumlah_barang[3] = {5, 5, 5};
+    int jumlah_beli, jumlah_bayar;
+    float uang_kita;
+
+    switch(pilihan)
+        {
+        case 0 :
+            cout << "Terima kasih telah menggunakan aplikasi kami." << endl;
+                break;
+
+        case 1 :
+            cout << "Masukkan jumlah " << nama_barang[0] << " yang anda inginkan: ";
+            cin >> jumlah_beli;
+
+            if(jumlah_beli > jumlah_barang[0])
+            {
+                cout << "Maaf, jumlah barang yang anda masukkan melebihi stok persediaan kami." << endl;
+                break;
+            }
+            jumlah_bayar = jumlah_beli * harga_barang[0];
+            cout << endl;
+            cout << "Jumlah harga yang harus anda bayar adalah " << jumlah_bayar << " rupiah" <<endl;
+            cout << endl;
+
+            cout << "Masukkan uang Anda (rupiah): ";
+            cin >> uang_kita;
+
+            if(uang_kita < jumlah_bayar)
+            {
+                cout << "Maaf, uang Anda tidak cukup." << endl;
+                break;
+            }
+            else if(uang_kita > jumlah_bayar)
+            {
+                int kembalian;
+                kembalian = uang_kita - jumlah_bayar;
+                cout << endl;
+
+                cout << "Kembalian anda adalah " << kembalian << " rupiah" << endl;
+            }
+    cout << "-------------------------------------------" << endl;
+    cout << "Terima kasih telah berbelanja." << endl;
+    break;
+
+        case 2 :
+            cout << "Masukkan jumlah " << nama_barang[1] << " yang anda inginkan: ";
+            cin >> jumlah_beli;
+
+            if(jumlah_beli > jumlah_barang[1])
+            {
+                cout << "Maaf, jumlah barang yang anda masukkan melebihi stok persediaan kami." << endl;
+                break;
+            }
+            jumlah_bayar = jumlah_beli * harga_barang[1];
+            cout << endl;
+            cout << "Jumlah harga yang harus anda bayar adalah " << jumlah_bayar << " rupiah" << endl;
+            cout << endl;
+
+            cout << "Masukkan uang Anda (rupiah): ";
+            cin >> uang_kita;
+
+            if(uang_kita < jumlah_bayar)
+            {
+                cout << "Maaf, uang Anda tidak cukup." << endl;
+                break;
+            }
+            else if(uang_kita > jumlah_bayar)
+            {
+                int kembalian;
+                kembalian = uang_kita - jumlah_bayar;
+                cout << endl;
+
+                cout << "Kembalian anda adalah " << kembalian << " rupiah" << endl;
+            }
+    cout << "-------------------------------------------" << endl;
+    cout << "Terima kasih telah berbelanja." << endl;
+    break;
+
+        case 3 :
+            cout << "Masukkan jumlah " << nama_barang[2] << " yang anda inginkan: ";
+            cin >> jumlah_beli;
+
+            if(jumlah_beli > jumlah_barang[2])
+            {
+                cout << "Maaf, jumlah barang yang anda masukkan melebihi stok persediaan kami." << endl;
+                break;
+            }
+            jumlah_bayar = jumlah_beli * harga_barang[2];
+            cout << endl;
+            cout << "Jumlah harga yang harus anda bayar adalah " << jumlah_bayar << " rupiah" << endl;
+            cout << endl;
+
+            cout << "Masukkan uang Anda (rupiah): ";
+            cin >> uang_kita;
+
+            if(uang_kita < jumlah_bayar)
+            {
+                cout << "Maaf, uang Anda tidak cukup." << endl;
+                break;
+            }
+            else if(uang_kita > jumlah_bayar)
+            {
+                int kembalian;
+                kembalian = uang_kita - jumlah_bayar;
+                cout << endl;
+
+                cout << "Kembalian anda adalah " << kembalian << " rupiah" << endl;
+            }
+    cout << "-------------------------------------------" << endl;
+    cout << "Terima kasih telah berbelanja." << endl;
+    break;
+    }
+}
+
+int main()
+{
+    string nama_barang[3] = {"Capuccino", "Coca-cola", "Teh Botol"};
+    int harga_barang[3] = {5000, 7000, 5000};
+    int jumlah_barang[3] = {5, 5, 5};
+    int jumlah_beli, jumlah_bayar, pilihan;
+    float uang_kita;
+
+
+    cout << "\t VENDING MACHINE HAYUUUKK \t" << endl << endl;
+
+    cout << "===========================================" << endl;
+    cout << "|No |" << "   Nama Barang   |  Harga  |  Jumlah |" << endl;
+    cout << "-------------------------------------------" << endl;
+    for(int i=0; i<=2; i++)
+    {
+        cout << "|" << i+1 << ". |" << "  " << nama_barang[i] << "      | " << harga_barang[i] << "    |   " << jumlah_barang[i] << "     |" << endl;
+
+    }
+    cout << "-------------------------------------------" << endl;
+    cout << "|0. |" << "   exit" << "\t\t\t\t  |" << endl;
+    cout << "===========================================" << endl;
+    cout << endl;
+
+    cout << "Masukkan pilihan anda: ";
+    cin >> pilihan;
+    cout << endl;
+
+    fungsi_pertama(pilihan);
+
+
+    return 0;
+}
